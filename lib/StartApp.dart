@@ -3,7 +3,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 // pages
 import 'Pages/addmoviment.dart';
 import 'Pages/mainscreen.dart';
