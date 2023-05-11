@@ -14,9 +14,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Column(
-        children: [],
-      )),
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }
