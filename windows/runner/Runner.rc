@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "financeapp" "\0"
+            VALUE "CompanyName", "com.rakkii.financerakkii" "\0"
+            VALUE "FileDescription", "financerakkii" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "financeapp" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "financeapp.exe" "\0"
-            VALUE "ProductName", "financeapp" "\0"
+            VALUE "InternalName", "financerakkii" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.rakkii.financerakkii. All rights reserved." "\0"
+            VALUE "OriginalFilename", "financerakkii.exe" "\0"
+            VALUE "ProductName", "financerakkii" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
