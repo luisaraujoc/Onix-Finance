@@ -94,13 +94,6 @@ class _StartAppState extends State<StartApp> {
     );
   }
 
-  // settab state
-  // void setTab(int index) {
-  //   setState(() {
-  //     _index = index;
-  //   });
-  // }
-
   void selectTab(int index) {
     setState(() {
       _index = index;
