@@ -1,6 +1,6 @@
 # financerakkii
 
-A new Flutter project.
+Esse é um app pessoal de finanças pra controlar meus gastos e ganhos de qualquer lugar.
 
 ## Getting Started
 
