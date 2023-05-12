@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -14,13 +14,15 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width; //pegar a largura
+    double screenHeight = MediaQuery.of(context).size.height; //pegar a altura
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
+            colors: const [
               Colors.blue,
               Colors.indigo,
             ],
@@ -51,6 +53,9 @@ class BottomZoneGetStarted extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width; //pegar a largura
+    double screenHeight = MediaQuery.of(context).size.height; //pegar a altura
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -88,10 +93,10 @@ class BottomZoneGetStarted extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(28.0),
             child: Container(
-              height: 56,
+              height: screenHeight / 18,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [
+                  colors: const [
                     Colors.blue,
                     Colors.indigo,
                   ],
