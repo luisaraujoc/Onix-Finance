@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers, sort_child_properties_last
 
+import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -18,14 +19,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     double screenHeight = MediaQuery.of(context).size.height; //pegar a altura
     return Scaffold(
       body: Container(
+        height: screenHeight,
+        width: screenWidth,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: const [
-              Colors.blue,
-              Colors.indigo,
-            ],
+            colors: DarkTheme.backgroundGradient.colors,
           ),
         ),
         child: Column(
@@ -59,10 +59,10 @@ class BottomZoneGetStarted extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20.0),
-          topRight: Radius.circular(20.2),
+          topLeft: Radius.circular(15.0),
+          topRight: Radius.circular(15.0),
         ),
-        color: Colors.white,
+        color: LightTheme.backgroundColor,
       ),
       child: Column(
         children: [
@@ -75,6 +75,7 @@ class BottomZoneGetStarted extends StatelessWidget {
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w600,
                   fontSize: 46,
+                  color: LightTheme.textColor,
                 ),
               ),
             ),
@@ -86,35 +87,61 @@ class BottomZoneGetStarted extends StatelessWidget {
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.w400,
                 fontSize: 20,
+                color: LightTheme.textColor,
               ),
               textAlign: TextAlign.center,
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(28.0),
+            padding: const EdgeInsets.only(
+              top: 20,
+              bottom: 0.0,
+              left: 40.0,
+              right: 40.0,
+            ),
             child: Container(
-              height: screenHeight / 18,
+              height: screenHeight / 17,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: const [
-                    Colors.blue,
-                    Colors.indigo,
-                  ],
-                ),
+                color: LightTheme.accentColor,
                 borderRadius: BorderRadius.all(
-                  Radius.circular(30),
+                  Radius.circular(4),
                 ),
               ),
               child: Center(
-                child: Text(
-                  "Get Start",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: "Poppins",
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600,
-                  ),
+                child: Text("Vamos Começar",
+                    style: TextStyle().copyWith(
+                      color: DarkTheme.textColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                    )),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 20,
+              bottom: 0.0,
+              left: 40.0,
+              right: 40.0,
+            ),
+            child: Container(
+              height: screenHeight / 17,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: DarkTheme.backgroundSecondaryColor,
+                  width: 1,
                 ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(4),
+                ),
+              ),
+              child: Center(
+                child: Text("Login",
+                    style: TextStyle().copyWith(
+                      color: LightTheme.textColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                    )),
               ),
             ),
           ),
