@@ -25,7 +25,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: DarkTheme.backgroundGradient.colors,
+            colors: const [
+              LightTheme.accentColor,
+              DarkTheme.accentSecondaryColor,
+            ],
           ),
         ),
         child: Column(

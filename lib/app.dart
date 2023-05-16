@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'common/ColorsApp.dart';
 import 'freatures/onboarding/onboarding_page.dart';
+import 'freatures/register/register_page.dart';
 import 'freatures/splash/splash_page.dart';
 
 class App extends StatelessWidget {
@@ -14,7 +15,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Finance Rakkii',
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: RegisterScreen(),
     );
   }
 }

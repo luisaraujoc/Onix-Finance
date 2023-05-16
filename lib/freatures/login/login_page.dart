@@ -5,10 +5,10 @@ import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
@@ -23,9 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
 }
 
 class LoginContainer extends StatelessWidget {
-  const LoginContainer({
-    super.key,
-  });
+  const LoginContainer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -142,13 +140,13 @@ class LoginContainer extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        // Label text email align left
+                        // Label text password align left
                         Padding(
                           padding: const EdgeInsets.only(left: 4.0, bottom: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Email",
+                              "Password",
                               style: TextStyle(
                                   color: LightTheme.primaryColor,
                                   fontSize: 20,
@@ -169,7 +167,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // forgot password text button
+// forgot password text button
           Container(
             margin: EdgeInsets.only(top: 0.0),
             child: Padding(
@@ -191,7 +189,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // button login
+// button login
           Container(
             margin: EdgeInsets.only(top: 50),
             child: Padding(
@@ -217,7 +215,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // separate text {or}
+// separate text {or}
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -225,22 +223,23 @@ class LoginContainer extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // line left
+// line left
                   Container(
                     margin: EdgeInsets.only(right: 10),
                     width: 100,
                     height: 1,
                     color: LightTheme.primaryColor,
                   ),
-                  // text or
+// text or
                   Text(
                     "or",
                     style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                      color: LightTheme.primaryColor,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  // line right
+// line right
                   Container(
                     margin: EdgeInsets.only(left: 10),
                     width: 100,
@@ -251,7 +250,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // outline button login with google
+// outline button login with google
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -289,7 +288,7 @@ class LoginContainer extends StatelessWidget {
                 ),
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(500, 48),
-                  // border color
+// border color
                   side: BorderSide(
                     color: LightTheme.primaryColor,
                     width: 1,
@@ -298,7 +297,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // outline button login with facebook
+// outline button login with facebook
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -334,7 +333,7 @@ class LoginContainer extends StatelessWidget {
                 ),
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(500, 48),
-                  // border color
+// border color
                   side: BorderSide(
                     color: LightTheme.primaryColor,
                     width: 1,
