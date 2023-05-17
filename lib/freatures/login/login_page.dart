@@ -146,18 +146,21 @@ class LoginContainer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              "Password",
+                              "Senha",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                color: LightTheme.primaryColor,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            hintText: "Password",
+                            hintText: "Senha",
+                            prefixIcon: Icon(Icons.lock),
                           ),
                         ),
                       ],
