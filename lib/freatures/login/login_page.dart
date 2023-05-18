@@ -37,6 +37,7 @@ class LoginContainer extends StatelessWidget {
       child: Column(
         children: [
           // back button
+<<<<<<< HEAD
           Container(
             margin: EdgeInsets.only(top: 50, left: 10),
             child: Row(
@@ -64,6 +65,9 @@ class LoginContainer extends StatelessWidget {
               ],
             ),
           ),
+=======
+          BackButton(),
+>>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           // title login
           Container(
             margin: EdgeInsets.only(top: 50),
@@ -101,6 +105,7 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // form login
+<<<<<<< HEAD
           Container(
             margin: EdgeInsets.only(top: 50),
             child: Padding(
@@ -179,6 +184,10 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // forgot password text button
+=======
+          LoginForm(),
+// forgot password text button
+>>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           Container(
             margin: EdgeInsets.only(top: 0.0),
             child: Padding(
@@ -226,6 +235,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
+<<<<<<< HEAD
           // separate text {or}
           Container(
             margin: EdgeInsets.only(top: 30),
@@ -262,6 +272,11 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // outline button login with google
+=======
+// separate text {or}
+          Separator(),
+// outline button login with google
+>>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -354,6 +369,173 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class BackButton extends StatelessWidget {
+  const BackButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 50, left: 10),
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              EvaIcons.arrowIosBack,
+              color: LightTheme.primaryColor,
+            ),
+          ),
+          Text(
+            "Voltar",
+            style: TextStyle(
+                color: LightTheme.primaryColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+
+// separator
+class Separator extends StatelessWidget {
+  const Separator({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 30),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 30, right: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+// line left
+            Container(
+              margin: EdgeInsets.only(right: 10),
+              width: 100,
+              height: 1,
+              color: LightTheme.primaryColor,
+            ),
+// text or
+            Text(
+              "or",
+              style: TextStyle(
+                color: LightTheme.primaryColor,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+// line right
+            Container(
+              margin: EdgeInsets.only(left: 10),
+              width: 100,
+              height: 1,
+              color: LightTheme.primaryColor,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+// login form
+class LoginForm extends StatelessWidget {
+  const LoginForm({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 50),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 30, right: 30),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 4.0,
+                right: 4.0,
+                bottom: 24.0,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  // Label text email align left
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Email",
+                        style: TextStyle(
+                            color: LightTheme.primaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "email@mail.com",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 4.0,
+                right: 4.0,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  // Label text password align left
+                  Padding(
+                    padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Senha",
+                        style: TextStyle(
+                          color: LightTheme.primaryColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Senha",
+                      prefixIcon: Icon(Icons.lock),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
