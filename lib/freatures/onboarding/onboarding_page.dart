@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers, sort_child_properties_last
 
 import 'package:financerakkii/common/ColorsApp.dart';
+import 'package:financerakkii/freatures/login/login_page.dart';
+import 'package:financerakkii/freatures/register/register_page.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -93,59 +95,69 @@ class BottomZoneGetStarted extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 20,
-              bottom: 0.0,
-              left: 40.0,
-              right: 40.0,
-            ),
-            child: Container(
-              height: screenHeight / 17,
-              decoration: BoxDecoration(
-                color: LightTheme.accentColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
+          Container(
+            margin: EdgeInsets.only(top: 30),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterScreen()),
+                  );
+                },
+                child: Center(
+                  child: Text(
+                    "Vamos Começar",
+                    style: TextStyle(
+                        color: DarkTheme.textColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Text("Vamos Começar",
-                    style: TextStyle().copyWith(
-                      color: DarkTheme.textColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    )),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: LightTheme.accentColor,
+                  minimumSize: Size(500, 56),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 20,
-              bottom: 0.0,
-              left: 40.0,
-              right: 40.0,
-            ),
-            child: Container(
-              height: screenHeight / 17,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: DarkTheme.backgroundSecondaryColor,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(4),
-                ),
-              ),
+          Container(
+            margin: EdgeInsets.only(top: 30, left: 30.0, right: 30.0),
+            child: OutlinedButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
               child: Center(
-                child: Text("Login",
-                    style: TextStyle().copyWith(
-                      color: LightTheme.textColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                    )),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                    right: 8.0,
+                  ),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        color: LightTheme.primaryColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              style: OutlinedButton.styleFrom(
+                minimumSize: Size(500, 56),
+                side: BorderSide(
+                  color: LightTheme.primaryColor,
+                  width: 2,
+                ),
               ),
             ),
-          ),
+          )
         ],
       ),
     );

@@ -2,6 +2,7 @@
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:financerakkii/common/ColorsApp.dart';
+import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -15,8 +16,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: LoginContainer(),
+      body: SingleChildScrollView(
+        child: Container(
+          child: LoginContainer(),
+        ),
       ),
     );
   }
@@ -40,7 +43,11 @@ class LoginContainer extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OnBoardingScreen()),
+                    );
                   },
                   icon: Icon(
                     EvaIcons.arrowIosBack,
@@ -127,6 +134,7 @@ class LoginContainer extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "email@mail.com",
+                            prefixIcon: Icon(EvaIcons.emailOutline),
                           ),
                         ),
                       ],
@@ -160,7 +168,7 @@ class LoginContainer extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Senha",
-                            prefixIcon: Icon(Icons.lock),
+                            prefixIcon: Icon(EvaIcons.lockOutline),
                           ),
                         ),
                       ],
@@ -170,7 +178,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-// forgot password text button
+          // forgot password text button
           Container(
             margin: EdgeInsets.only(top: 0.0),
             child: Padding(
@@ -192,7 +200,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-// button login
+          // button login
           Container(
             margin: EdgeInsets.only(top: 50),
             child: Padding(
@@ -218,7 +226,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-// separate text {or}
+          // separate text {or}
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -253,7 +261,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-// outline button login with google
+          // outline button login with google
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -300,7 +308,7 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-// outline button login with facebook
+          // outline button login with facebook
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(

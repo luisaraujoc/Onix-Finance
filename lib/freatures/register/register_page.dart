@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:financerakkii/common/ColorsApp.dart';
+import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -33,7 +36,11 @@ class RegisterContainer extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => OnBoardingScreen()),
+                    );
                   },
                   icon: Icon(
                     EvaIcons.arrowIosBack,
@@ -98,10 +105,10 @@ class RegisterContainer extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
+                      children: const [
                         // Label text email align left
                         Padding(
-                          padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                          padding: EdgeInsets.only(left: 4.0, bottom: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -116,6 +123,7 @@ class RegisterContainer extends StatelessWidget {
                         TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
+                            prefixIcon: Icon(EvaIcons.editOutline),
                             hintText: "Name",
                           ),
                         ),
@@ -127,10 +135,10 @@ class RegisterContainer extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
+                      children: const [
                         // Label text email align left
                         Padding(
-                          padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                          padding: EdgeInsets.only(left: 4.0, bottom: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -146,6 +154,7 @@ class RegisterContainer extends StatelessWidget {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "email@mail.com",
+                            prefixIcon: Icon(EvaIcons.emailOutline),
                           ),
                         ),
                       ],
@@ -156,10 +165,10 @@ class RegisterContainer extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
+                      children: const [
                         // Label text email align left
                         Padding(
-                          padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                          padding: EdgeInsets.only(left: 4.0, bottom: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -172,9 +181,11 @@ class RegisterContainer extends StatelessWidget {
                           ),
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Password",
+                            prefixIcon: Icon(EvaIcons.lockOutline),
                           ),
                         ),
                       ],
@@ -186,10 +197,10 @@ class RegisterContainer extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
+                      children: const [
                         // Label text email align left
                         Padding(
-                          padding: const EdgeInsets.only(left: 4.0, bottom: 8),
+                          padding: EdgeInsets.only(left: 4.0, bottom: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -202,9 +213,11 @@ class RegisterContainer extends StatelessWidget {
                           ),
                         ),
                         TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: "Confirm Password",
+                            prefixIcon: Icon(EvaIcons.lockOutline),
                           ),
                         ),
                       ],
