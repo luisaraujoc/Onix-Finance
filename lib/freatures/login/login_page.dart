@@ -37,7 +37,6 @@ class LoginContainer extends StatelessWidget {
       child: Column(
         children: [
           // back button
-<<<<<<< HEAD
           Container(
             margin: EdgeInsets.only(top: 50, left: 10),
             child: Row(
@@ -65,9 +64,7 @@ class LoginContainer extends StatelessWidget {
               ],
             ),
           ),
-=======
           BackButton(),
->>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           // title login
           Container(
             margin: EdgeInsets.only(top: 50),
@@ -105,7 +102,6 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // form login
-<<<<<<< HEAD
           Container(
             margin: EdgeInsets.only(top: 50),
             child: Padding(
@@ -184,10 +180,7 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // forgot password text button
-=======
-          LoginForm(),
 // forgot password text button
->>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           Container(
             margin: EdgeInsets.only(top: 0.0),
             child: Padding(
@@ -235,7 +228,6 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-<<<<<<< HEAD
           // separate text {or}
           Container(
             margin: EdgeInsets.only(top: 30),
@@ -272,11 +264,9 @@ class LoginContainer extends StatelessWidget {
             ),
           ),
           // outline button login with google
-=======
 // separate text {or}
           Separator(),
 // outline button login with google
->>>>>>> f0e3691ad7da2012ffc6d00a108e57a17780ef8a
           Container(
             margin: EdgeInsets.only(top: 30),
             child: Padding(
@@ -407,7 +397,6 @@ class BackButton extends StatelessWidget {
   }
 }
 
-
 // separator
 class Separator extends StatelessWidget {
   const Separator({
@@ -452,7 +441,6 @@ class Separator extends StatelessWidget {
     );
   }
 }
-
 
 // login form
 class LoginForm extends StatelessWidget {
