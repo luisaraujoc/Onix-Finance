@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
@@ -24,9 +23,7 @@ class RegisterContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: LightTheme.backgroundColor,
-      ),
+      decoration: BoxDecoration(),
       child: Column(
         children: [
           // back button
@@ -44,15 +41,11 @@ class RegisterContainer extends StatelessWidget {
                   },
                   icon: Icon(
                     EvaIcons.arrowIosBack,
-                    color: LightTheme.primaryColor,
                   ),
                 ),
                 Text(
                   "Voltar",
-                  style: TextStyle(
-                      color: LightTheme.primaryColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -66,10 +59,7 @@ class RegisterContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Sign up",
-                    style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 48,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -84,10 +74,7 @@ class RegisterContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Create your account",
-                    style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -114,9 +101,7 @@ class RegisterContainer extends StatelessWidget {
                             child: Text(
                               "Name",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -144,9 +129,7 @@ class RegisterContainer extends StatelessWidget {
                             child: Text(
                               "Email",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -174,9 +157,7 @@ class RegisterContainer extends StatelessWidget {
                             child: Text(
                               "Password",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -206,9 +187,7 @@ class RegisterContainer extends StatelessWidget {
                             child: Text(
                               "Confirm Password",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -233,10 +212,7 @@ class RegisterContainer extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Text(
               "Ao clicar em \"Register\" você concorda com os nossos\ntermos e condições de uso.",
-              style: TextStyle(
-                  color: LightTheme.primaryColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           // button Register
@@ -248,14 +224,9 @@ class RegisterContainer extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   "Register",
-                  style: TextStyle(
-                      color: DarkTheme.textColor,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
-                  onPrimary: LightTheme.primaryColor,
-                  primary: LightTheme.accentColor,
                   minimumSize: Size(double.infinity, 48),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),

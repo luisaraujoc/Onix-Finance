@@ -1,7 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_import
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
@@ -31,39 +30,10 @@ class LoginContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: LightTheme.backgroundColor,
-      ),
+      decoration: BoxDecoration(),
       child: Column(
         children: [
           // back button
-          Container(
-            margin: EdgeInsets.only(top: 50, left: 10),
-            child: Row(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => OnBoardingScreen()),
-                    );
-                  },
-                  icon: Icon(
-                    EvaIcons.arrowIosBack,
-                    color: LightTheme.primaryColor,
-                  ),
-                ),
-                Text(
-                  "Voltar",
-                  style: TextStyle(
-                      color: LightTheme.primaryColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-          ),
           BackButton(),
           // title login
           Container(
@@ -74,10 +44,7 @@ class LoginContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Sign in",
-                    style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 48,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -92,10 +59,7 @@ class LoginContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Please log in into your account",
-                    style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -125,9 +89,7 @@ class LoginContainer extends StatelessWidget {
                             child: Text(
                               "Email",
                               style: TextStyle(
-                                  color: LightTheme.primaryColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -157,7 +119,6 @@ class LoginContainer extends StatelessWidget {
                             child: Text(
                               "Senha",
                               style: TextStyle(
-                                color: LightTheme.primaryColor,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -192,10 +153,8 @@ class LoginContainer extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Forgot password?",
-                      style: TextStyle(
-                          color: LightTheme.primaryColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
                     ),
                   ),
                 ],
@@ -212,14 +171,10 @@ class LoginContainer extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Login",
-                    style: TextStyle(
-                        color: DarkTheme.textColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: LightTheme.accentColor,
                   minimumSize: Size(500, 48),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
@@ -228,42 +183,6 @@ class LoginContainer extends StatelessWidget {
               ),
             ),
           ),
-          // separate text {or}
-          Container(
-            margin: EdgeInsets.only(top: 30),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 30, right: 30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-// line left
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    width: 100,
-                    height: 1,
-                    color: LightTheme.primaryColor,
-                  ),
-// text or
-                  Text(
-                    "or",
-                    style: TextStyle(
-                      color: LightTheme.primaryColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-// line right
-                  Container(
-                    margin: EdgeInsets.only(left: 10),
-                    width: 100,
-                    height: 1,
-                    color: LightTheme.primaryColor,
-                  ),
-                ],
-              ),
-            ),
-          ),
-          // outline button login with google
 // separate text {or}
           Separator(),
 // outline button login with google
@@ -285,9 +204,7 @@ class LoginContainer extends StatelessWidget {
                         child: Text(
                           "Login with Google",
                           style: TextStyle(
-                              color: LightTheme.primaryColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -297,7 +214,6 @@ class LoginContainer extends StatelessWidget {
                       ),
                       child: Icon(
                         EvaIcons.google,
-                        color: LightTheme.primaryColor,
                       ),
                     ),
                   ],
@@ -306,7 +222,6 @@ class LoginContainer extends StatelessWidget {
                   minimumSize: Size(500, 48),
 // border color
                   side: BorderSide(
-                    color: LightTheme.primaryColor,
                     width: 1,
                   ),
                 ),
@@ -332,16 +247,13 @@ class LoginContainer extends StatelessWidget {
                         child: Text(
                           "Login with Facebook",
                           style: TextStyle(
-                              color: LightTheme.primaryColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                              fontSize: 20, fontWeight: FontWeight.bold),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Icon(
                           EvaIcons.facebook,
-                          color: LightTheme.primaryColor,
                         ),
                       )
                     ],
@@ -351,7 +263,6 @@ class LoginContainer extends StatelessWidget {
                   minimumSize: Size(500, 48),
 // border color
                   side: BorderSide(
-                    color: LightTheme.primaryColor,
                     width: 1,
                   ),
                 ),
@@ -377,19 +288,18 @@ class BackButton extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => OnBoardingScreen()),
+              );
             },
             icon: Icon(
               EvaIcons.arrowIosBack,
-              color: LightTheme.primaryColor,
             ),
           ),
           Text(
             "Voltar",
-            style: TextStyle(
-                color: LightTheme.primaryColor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           )
         ],
       ),
@@ -417,13 +327,11 @@ class Separator extends StatelessWidget {
               margin: EdgeInsets.only(right: 10),
               width: 100,
               height: 1,
-              color: LightTheme.primaryColor,
             ),
 // text or
             Text(
               "or",
               style: TextStyle(
-                color: LightTheme.primaryColor,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -433,7 +341,6 @@ class Separator extends StatelessWidget {
               margin: EdgeInsets.only(left: 10),
               width: 100,
               height: 1,
-              color: LightTheme.primaryColor,
             ),
           ],
         ),
@@ -473,9 +380,7 @@ class LoginForm extends StatelessWidget {
                       child: Text(
                         "Email",
                         style: TextStyle(
-                            color: LightTheme.primaryColor,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -504,7 +409,6 @@ class LoginForm extends StatelessWidget {
                       child: Text(
                         "Senha",
                         style: TextStyle(
-                          color: LightTheme.primaryColor,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),

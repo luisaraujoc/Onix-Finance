@@ -1,4 +1,3 @@
-import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,8 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              LightTheme.accentColor,
-              LightTheme.accentSecondaryColor,
+              Colors.indigo,
+              Colors.indigoAccent,
             ],
           ),
         ),

@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers, sort_child_properties_last
 
-import 'package:financerakkii/common/ColorsApp.dart';
+// import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:financerakkii/freatures/login/login_page.dart';
 import 'package:financerakkii/freatures/register/register_page.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +26,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: const [
-              LightTheme.accentColor,
-              DarkTheme.accentSecondaryColor,
+              Colors.indigo,
+              Colors.indigoAccent,
             ],
           ),
         ),
@@ -65,7 +65,6 @@ class BottomZoneGetStarted extends StatelessWidget {
           topLeft: Radius.circular(15.0),
           topRight: Radius.circular(15.0),
         ),
-        color: LightTheme.backgroundColor,
       ),
       child: Column(
         children: [
@@ -78,7 +77,6 @@ class BottomZoneGetStarted extends StatelessWidget {
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w600,
                   fontSize: 46,
-                  color: LightTheme.textColor,
                 ),
               ),
             ),
@@ -90,7 +88,6 @@ class BottomZoneGetStarted extends StatelessWidget {
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.w400,
                 fontSize: 20,
-                color: LightTheme.textColor,
               ),
               textAlign: TextAlign.center,
             ),
@@ -109,14 +106,10 @@ class BottomZoneGetStarted extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Vamos Começar",
-                    style: TextStyle(
-                        color: DarkTheme.textColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: LightTheme.accentColor,
                   minimumSize: Size(500, 56),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
@@ -142,17 +135,13 @@ class BottomZoneGetStarted extends StatelessWidget {
                   ),
                   child: Text(
                     "Login",
-                    style: TextStyle(
-                        color: LightTheme.primaryColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               style: OutlinedButton.styleFrom(
                 minimumSize: Size(500, 56),
                 side: BorderSide(
-                  color: LightTheme.primaryColor,
                   width: 2,
                 ),
               ),

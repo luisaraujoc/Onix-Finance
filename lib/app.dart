@@ -8,14 +8,20 @@ import 'freatures/onboarding/onboarding_page.dart';
 import 'freatures/register/register_page.dart';
 import 'freatures/splash/splash_page.dart';
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
 
   @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Finance Rakkii',
+      title: 'Financerakkii',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(colorSchemeSeed: Colors.lightBlue),
       home: HomeScreen(),
     );
   }
