@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'freatures/onboarding/onboarding.dart';
-import 'freatures/splash/splash_page.dart';
+// import 'freatures/splash/splash_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
