@@ -2,8 +2,7 @@
 import 'package:financerakkii/freatures/login/login_page.dart';
 import 'package:flutter/material.dart';
 
-import 'common/ColorsApp.dart';
-import 'common/ThemeLight.dart';
+// import 'common/ColorsApp.dart';
 import 'freatures/home/home_page.dart';
 import 'freatures/onboarding/onboarding_page.dart';
 import 'freatures/register/register_page.dart';
@@ -20,10 +19,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Financerakkii',
+      title: 'Finance Rakkii',
       debugShowCheckedModeBanner: false,
-      theme: LightThemeData(),
-      home: OnBoardingScreen(),
+      home: HomeScreen(),
     );
   }
 }

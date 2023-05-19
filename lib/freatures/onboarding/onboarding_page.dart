@@ -18,31 +18,33 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     double screenWidth = MediaQuery.of(context).size.width; //pegar a largura
     double screenHeight = MediaQuery.of(context).size.height; //pegar a altura
     return Scaffold(
-      body: Container(
-        height: screenHeight,
-        width: screenWidth,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: const [
-              Colors.indigo,
-              Colors.indigoAccent,
+      body: SingleChildScrollView(
+        child: Container(
+          height: screenHeight,
+          width: screenWidth,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: const [
+                Colors.indigo,
+                Colors.indigoAccent,
+              ],
+            ),
+          ),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(),
+              ),
+              Expanded(
+                child: Container(
+                  child: BottomZoneGetStarted(),
+                ),
+              )
             ],
           ),
-        ),
-        child: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(),
-            ),
-            Expanded(
-              child: Container(
-                child: BottomZoneGetStarted(),
-              ),
-            )
-          ],
         ),
       ),
     );
@@ -61,7 +63,7 @@ class BottomZoneGetStarted extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: ColorsApp.backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15.0),
           topRight: Radius.circular(15.0),
@@ -109,6 +111,7 @@ class BottomZoneGetStarted extends StatelessWidget {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
+                  backgroundColor: ColorsApp.lightPrimaryColor,
                   minimumSize: Size(500, 56),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
@@ -144,6 +147,7 @@ class BottomZoneGetStarted extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                 minimumSize: Size(500, 56),
                 side: BorderSide(
+                  color: ColorsApp.lightPrimaryColor,
                   width: 2,
                 ),
               ),

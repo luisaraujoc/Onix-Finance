@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, override_on_non_overriding_member, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, override_on_non_overriding_member, avoid_unnecessary_containers, unused_import
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
