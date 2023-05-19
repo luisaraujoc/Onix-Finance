@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers, sort_child_properties_last
 
-// import 'package:financerakkii/common/ColorsApp.dart';
+import 'package:financerakkii/common/ColorsApp.dart';
 import 'package:financerakkii/freatures/login/login_page.dart';
 import 'package:financerakkii/freatures/register/register_page.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +61,7 @@ class BottomZoneGetStarted extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
+        color: backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(15.0),
           topRight: Radius.circular(15.0),
@@ -74,7 +75,6 @@ class BottomZoneGetStarted extends StatelessWidget {
               child: Text(
                 "Finance Rakkii",
                 style: TextStyle(
-                  fontFamily: "Poppins",
                   fontWeight: FontWeight.w600,
                   fontSize: 46,
                 ),
@@ -85,7 +85,6 @@ class BottomZoneGetStarted extends StatelessWidget {
             child: Text(
               "Ajudando você a se controlar\nsua carteira",
               style: TextStyle(
-                fontFamily: "Poppins",
                 fontWeight: FontWeight.w400,
                 fontSize: 20,
               ),
@@ -135,7 +134,10 @@ class BottomZoneGetStarted extends StatelessWidget {
                   ),
                   child: Text(
                     "Login",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),

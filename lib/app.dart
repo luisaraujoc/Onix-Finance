@@ -3,6 +3,7 @@ import 'package:financerakkii/freatures/login/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'common/ColorsApp.dart';
+import 'common/ThemeLight.dart';
 import 'freatures/home/home_page.dart';
 import 'freatures/onboarding/onboarding_page.dart';
 import 'freatures/register/register_page.dart';
@@ -21,8 +22,8 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: 'Financerakkii',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: Colors.lightBlue),
-      home: HomeScreen(),
+      theme: LightThemeData(),
+      home: OnBoardingScreen(),
     );
   }
 }
