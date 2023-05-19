@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_import
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
+// import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -44,7 +44,10 @@ class LoginContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Sign in",
-                    style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ],
               ),
@@ -59,7 +62,10 @@ class LoginContainer extends StatelessWidget {
                 children: [
                   Text(
                     "Please log in into your account",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ],
               ),
@@ -88,8 +94,7 @@ class LoginContainer extends StatelessWidget {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Email",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold),
+                              style: TextStyle().apply(),
                             ),
                           ),
                         ),
@@ -222,6 +227,7 @@ class LoginContainer extends StatelessWidget {
                   minimumSize: Size(500, 48),
 // border color
                   side: BorderSide(
+                    color: Color(0xFFFAE4FF),
                     width: 1,
                   ),
                 ),
@@ -261,8 +267,8 @@ class LoginContainer extends StatelessWidget {
                 ),
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(500, 48),
-// border color
                   side: BorderSide(
+                    color: Color(0xFFFAE4FF),
                     width: 1,
                   ),
                 ),
@@ -288,18 +294,22 @@ class BackButton extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => OnBoardingScreen()),
-              );
+              // Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => OnBoardingScreen()),
+              // );
             },
             icon: Icon(
               EvaIcons.arrowIosBack,
+              color: Color(0xFFF1AFFF),
             ),
           ),
           Text(
             "Voltar",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: Color(0xFFF1AFFF),
+                fontSize: 18,
+                fontWeight: FontWeight.bold),
           )
         ],
       ),
@@ -326,6 +336,7 @@ class Separator extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(right: 10),
               width: 100,
+              color: Color(0xFFF1AFFF),
               height: 1,
             ),
 // text or
@@ -340,6 +351,7 @@ class Separator extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: 100,
+              color: Color(0xFFF1AFFF),
               height: 1,
             ),
           ],
@@ -418,7 +430,6 @@ class LoginForm extends StatelessWidget {
                   TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
                       hintText: "Senha",
                       prefixIcon: Icon(Icons.lock),
                     ),

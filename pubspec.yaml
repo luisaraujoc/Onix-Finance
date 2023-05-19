@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   eva_icons_flutter: ^3.1.0
   get: ^4.6.5
+  json_theme: ^5.0.2+6
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/themes/darkTheme.json
+    - assets/themes/appainter_theme.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
