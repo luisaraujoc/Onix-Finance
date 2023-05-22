@@ -336,7 +336,7 @@ class Separator extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(right: 10),
               width: 100,
-              color: Color(0xFFF1AFFF),
+              color: Color(0xFF838383),
               height: 1,
             ),
 // text or
@@ -351,7 +351,7 @@ class Separator extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(left: 10),
               width: 100,
-              color: Color(0xFFF1AFFF),
+              color: Color(0xFF838383),
               height: 1,
             ),
           ],
