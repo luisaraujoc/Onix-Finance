@@ -94,7 +94,10 @@ class LoginContainer extends StatelessWidget {
                             alignment: Alignment.centerLeft,
                             child: Text(
                               "Email",
-                              style: TextStyle().apply(),
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
@@ -158,8 +161,10 @@ class LoginContainer extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "Forgot password?",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                 ],
@@ -176,7 +181,10 @@ class LoginContainer extends StatelessWidget {
                 child: Center(
                   child: Text(
                     "Login",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -209,7 +217,9 @@ class LoginContainer extends StatelessWidget {
                         child: Text(
                           "Login with Google",
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
@@ -253,7 +263,9 @@ class LoginContainer extends StatelessWidget {
                         child: Text(
                           "Login with Facebook",
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       Padding(
@@ -307,9 +319,10 @@ class BackButton extends StatelessWidget {
           Text(
             "Voltar",
             style: TextStyle(
-                color: Color(0xFFF1AFFF),
-                fontSize: 18,
-                fontWeight: FontWeight.bold),
+              color: Color(0xFFF1AFFF),
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           )
         ],
       ),
@@ -392,7 +405,9 @@ class LoginForm extends StatelessWidget {
                       child: Text(
                         "Email",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
