@@ -1,8 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_import
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_import, library_private_types_in_public_api
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 // import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
+
+import '../splash/splash.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -237,8 +239,11 @@ class LoginContainer extends StatelessWidget {
                   minimumSize: Size(500, 48),
 // border color
                   side: BorderSide(
-                    color: Color(0xFFFAE4FF),
+                    color: Color(0xFFDB38FF),
                     width: 1,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
                   ),
                 ),
               ),
@@ -280,8 +285,11 @@ class LoginContainer extends StatelessWidget {
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(500, 48),
                   side: BorderSide(
-                    color: Color(0xFFFAE4FF),
+                    color: Color(0xFFDB38FF),
                     width: 1,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4),
                   ),
                 ),
               ),
@@ -305,21 +313,14 @@ class BackButton extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {
-              // Navigator.pushReplacement(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => OnBoardingScreen()),
-              // );
-            },
+            onPressed: () {},
             icon: Icon(
               EvaIcons.arrowIosBack,
-              color: Color(0xFFF1AFFF),
             ),
           ),
           Text(
             "Voltar",
             style: TextStyle(
-              color: Color(0xFFF1AFFF),
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),

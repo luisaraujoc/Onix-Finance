@@ -1,8 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructor, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_print, unused_import, dead_code
 import 'package:financerakkii/freatures/login/login_page.dart';
+import 'package:financerakkii/freatures/splash/splash.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:json_theme/json_theme.dart';
 import 'freatures/register/register_page.dart';
 
 void main() async {
@@ -10,29 +9,28 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // final ThemeData theme;
-
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Financer Rakkii",
-      home: LoginScreen(),
+      home: Splash(),
       theme: ThemeData(
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(elevation: 0),
         brightness: Brightness.light,
         colorScheme: ColorScheme.light(
           background: Color(0xFFE8E0E5),
-          primary: Color(0xFF4E155F),
+          primary: Color(0xFFFFFFFF),
           primaryContainer: Color(0xFFFBD7FF),
           secondary: Color(0xFFFFFFFF),
           secondaryContainer: Color(0xFF20005F),
           tertiary: Color(0xFFFFFFFF),
           tertiaryContainer: Color(0xFF00210B),
-          surface: Color(0xFFFFFFFF),
-          surfaceTint: Color(0xFFF1AFFF),
+          surface: Color(0xFF5680FF),
+          surfaceTint: Color(0xFF16275D),
           surfaceVariant: Color(0xFF4C444C),
           error: Color(0xFFFF525F),
           errorContainer: Color(0xFFFFDAD9),
@@ -115,6 +113,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(elevation: 0),
         brightness: Brightness.dark,
         colorScheme: ColorScheme.dark(
           background: Color(0xFF1E1B1E),
