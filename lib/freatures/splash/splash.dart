@@ -1,5 +1,8 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
+import 'dart:async';
+
+import 'package:financerakkii/freatures/landing/landing-page.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -11,7 +14,18 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (BuildContext context) => LandingScreen(),
+            )));
+
     return Scaffold(
       body: Column(
         // align center
