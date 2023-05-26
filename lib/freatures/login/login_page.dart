@@ -5,7 +5,6 @@ import 'package:financerakkii/freatures/onboarding/onboarding.dart';
 // import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
-import '../splash/splash.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

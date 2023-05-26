@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructor, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_print, unused_import, dead_code
 import 'package:financerakkii/freatures/home/home_page.dart';
 import 'package:financerakkii/freatures/login/login_page.dart';
-import 'package:financerakkii/freatures/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'freatures/register/register_page.dart';
 
