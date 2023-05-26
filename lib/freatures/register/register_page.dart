@@ -4,6 +4,8 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 // import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
+import '../onboarding/onboarding.dart';
+
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -33,11 +35,13 @@ class RegisterContainer extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    // Navigator.pushReplacement(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => OnBoardingScreen()),
-                    // );
+                    // navigate to onboarding page
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OnboardingScreen(),
+                      ),
+                    );
                   },
                   icon: Icon(
                     EvaIcons.arrowIosBack,

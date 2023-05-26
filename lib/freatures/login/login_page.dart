@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, sort_child_properties_last, unused_import, library_private_types_in_public_api
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:financerakkii/freatures/onboarding/onboarding.dart';
 // import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
@@ -313,7 +314,15 @@ class BackButton extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              // navigate to onboarding page
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OnboardingScreen(),
+                ),
+              );
+            },
             icon: Icon(
               EvaIcons.arrowIosBack,
             ),

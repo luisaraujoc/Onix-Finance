@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:financerakkii/freatures/landing/landing-page.dart';
+import 'package:financerakkii/freatures/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -23,7 +23,7 @@ class _SplashState extends State<Splash> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (BuildContext context) => LandingScreen(),
+              builder: (BuildContext context) => OnboardingScreen(),
             )));
 
     return Scaffold(
