@@ -1,5 +1,5 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructor, prefer_const_literals_to_create_immutables, prefer_const_constructors_in_immutables, prefer_const_constructors, sized_box_for_whitespace, avoid_print, unused_import, dead_code
-import 'package:financerakkii/freatures/home/home_page.dart';
+import 'package:financerakkii/freatures/mainpages/main-pages.dart';
 import 'package:financerakkii/freatures/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'freatures/register/register_page.dart';
@@ -16,10 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Financer Rakkii",
-      home: HomeScreen(),
+      home: MainScreens(),
       theme: ThemeData(
-        useMaterial3: true,
-        appBarTheme: AppBarTheme(elevation: 1),
+        appBarTheme: AppBarTheme(elevation: 5),
         brightness: Brightness.light,
         colorScheme: ColorScheme.light(
           background: Color(0xFFfdfcff),
@@ -119,8 +118,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
-        useMaterial3: true,
-        appBarTheme: AppBarTheme(elevation: 1),
+        appBarTheme: AppBarTheme(elevation: 5),
         brightness: Brightness.dark,
         colorScheme: ColorScheme.dark(
           background: Color(0xFF1a1c1e),

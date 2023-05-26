@@ -40,11 +40,12 @@ dependencies:
   json_theme: ^5.0.2+6
   flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.3.0
+  google_nav_bar: ^5.0.6
 
 
 
 flutter_native_splash:
-  color: "#454545"
+  color: "#393939"
   image: "assets/images/logo.png"
   android: true
   ios: true
@@ -54,9 +55,9 @@ flutter_launcher_icons:
   android: true
   ios: true
   remove_alpha_ios: true
-  adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/icon/icon.png"
-  image_path: "assets/icon/icon.png"
+  adaptive_icon_foreground: "assets/icon/icon-image.png"
+  adaptive_icon_background: "#454545"
+  image_path: "assets/icon/icon-image.png"
 
 
 dev_dependencies:
