@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, unused_field, prefer_final_fields, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers, non_constant_identifier_names, override_on_non_overriding_member
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, unused_field, prefer_final_fields, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers, non_constant_identifier_names, override_on_non_overriding_member, unused_element, sort_child_properties_last, file_names
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:financerakkii/freatures/home/home-page.dart';
 
 class MainScreens extends StatefulWidget {
   const MainScreens({super.key});
@@ -13,10 +14,22 @@ class MainScreens extends StatefulWidget {
 
 class _MainScreensState extends State<MainScreens> {
   List<Widget> _pages = [
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
-    Container(color: Colors.green),
-    Container(color: Colors.yellow),
+    HomeScreen(),
+    Container(
+      child: Center(
+        child: Text("Page 2"),
+      ),
+    ),
+    Container(
+      child: Center(
+        child: Text("Page 3"),
+      ),
+    ),
+    Container(
+      child: Center(
+        child: Text("Page 4"),
+      ),
+    ),
   ];
 
   int _index = 0;
@@ -31,62 +44,45 @@ class _MainScreensState extends State<MainScreens> {
     super.initState();
   }
 
+  void setTab(index) {
+    setState(() {
+      _index = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: null,
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primaryContainer,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              color: Colors.black.withOpacity(.1),
-            )
-          ],
+      body: _pages[_index],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          EvaIcons.plus,
+          color: Colors.white,
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(3.0),
-          child: GNav(
-            gap: 12,
-            backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-            activeColor: Theme.of(context).colorScheme.primary,
-            tabs: [
-              GButton(
-                icon: EvaIcons.homeOutline,
-                text: 'Home',
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
-              ),
-              GButton(
-                icon: EvaIcons.creditCardOutline,
-                text: 'Carteira',
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
-              ),
-              GButton(
-                icon: EvaIcons.fileTextOutline,
-                text: 'Relatórios',
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
-              ),
-              GButton(
-                icon: EvaIcons.personOutline,
-                text: 'Perfil',
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
-                ),
-              ),
-            ],
-          ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
         ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: AnimatedBottomNavigationBar(
+        icons: [
+          EvaIcons.homeOutline,
+          EvaIcons.creditCardOutline,
+          EvaIcons.fileTextOutline,
+          EvaIcons.settingsOutline,
+        ],
+        activeIndex: _index,
+        backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+        inactiveColor: Theme.of(context).colorScheme.secondary,
+        activeColor: Theme.of(context).colorScheme.primary,
+        splashColor: Theme.of(context).colorScheme.primary,
+        notchSmoothness: NotchSmoothness.defaultEdge,
+        gapLocation: GapLocation.center,
+        onTap: (index) {
+          setTab(index);
+        },
       ),
     );
   }

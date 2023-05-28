@@ -18,8 +18,17 @@ class MyApp extends StatelessWidget {
       title: "Financer Rakkii",
       home: MainScreens(),
       theme: ThemeData(
-        appBarTheme: AppBarTheme(elevation: 5),
+        appBarTheme: AppBarTheme(
+          elevation: 5,
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         brightness: Brightness.light,
+        useMaterial3: true,
         colorScheme: ColorScheme.light(
           background: Color(0xFFfdfcff),
           primary: Color(0xFF0061a4),
@@ -50,6 +59,7 @@ class MyApp extends StatelessWidget {
           onTertiaryContainer: Color(0xFF251431),
           onSurfaceVariant: Color(0xFF43474e),
           onTertiary: Color(0xFFFFFFFF),
+          scrim: Color(0xFF2675FF),
         ),
         textTheme: TextTheme(
           headlineLarge: TextStyle(
@@ -86,19 +96,19 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Poppins',
             fontSize: 24,
             fontWeight: FontWeight.w400,
-            color: Colors.white,
+            color: Colors.black,
           ),
           bodyMedium: TextStyle(
             fontFamily: 'Poppins',
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: Colors.white,
+            color: Colors.black,
           ),
           bodySmall: TextStyle(
             fontFamily: 'Poppins',
             fontSize: 16,
             fontWeight: FontWeight.w400,
-            color: Colors.white,
+            color: Colors.black,
           ),
           labelLarge: TextStyle(
             fontFamily: 'Poppins',
@@ -120,6 +130,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         appBarTheme: AppBarTheme(elevation: 5),
         brightness: Brightness.dark,
+        useMaterial3: true,
         colorScheme: ColorScheme.dark(
           background: Color(0xFF1a1c1e),
           primary: Color(0xFF9ecaff),
@@ -150,6 +161,7 @@ class MyApp extends StatelessWidget {
           surfaceVariant: Color(0xFF43474e),
           tertiary: Color(0xFFd6bee4),
           tertiaryContainer: Color(0xFF523f5f),
+          scrim: Color(0xFF191A19),
         ),
         textTheme: TextTheme(
           headlineLarge: TextStyle(
