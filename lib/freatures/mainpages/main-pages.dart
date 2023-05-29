@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, unused_field, prefer_final_fields, prefer_const_literals_to_create_immutables, no_leading_underscores_for_local_identifiers, non_constant_identifier_names, override_on_non_overriding_member, unused_element, sort_child_properties_last, file_names
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:financerakkii/freatures/create-moviment/create-moviment-page.dart';
+import 'package:financerakkii/freatures/profile/profile-page.dart';
+import 'package:financerakkii/freatures/report/report-page.dart';
+import 'package:financerakkii/freatures/wallet/wallet-page.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:financerakkii/freatures/home/home-page.dart';
@@ -15,21 +19,9 @@ class MainScreens extends StatefulWidget {
 class _MainScreensState extends State<MainScreens> {
   List<Widget> _pages = [
     HomeScreen(),
-    Container(
-      child: Center(
-        child: Text("Page 2"),
-      ),
-    ),
-    Container(
-      child: Center(
-        child: Text("Page 3"),
-      ),
-    ),
-    Container(
-      child: Center(
-        child: Text("Page 4"),
-      ),
-    ),
+    WalletScreen(),
+    ReportScreen(),
+    ProfileScreen(),
   ];
 
   int _index = 0;
@@ -55,7 +47,14 @@ class _MainScreensState extends State<MainScreens> {
     return Scaffold(
       body: _pages[_index],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CreateMovimenteScreen(),
+            ),
+          );
+        },
         child: Icon(
           EvaIcons.plus,
           color: Colors.white,
@@ -65,7 +64,6 @@ class _MainScreensState extends State<MainScreens> {
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
         icons: [
           EvaIcons.homeOutline,
@@ -79,7 +77,9 @@ class _MainScreensState extends State<MainScreens> {
         activeColor: Theme.of(context).colorScheme.primary,
         splashColor: Theme.of(context).colorScheme.primary,
         notchSmoothness: NotchSmoothness.defaultEdge,
-        gapLocation: GapLocation.center,
+        gapLocation: GapLocation.none,
+        leftCornerRadius: 10,
+        rightCornerRadius: 10,
         onTap: (index) {
           setTab(index);
         },

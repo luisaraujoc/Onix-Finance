@@ -20,9 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
           "Home Page",
         ),
       ),
-      body: Center(
-        child: Text(
-          "Home Page",
+      body: SingleChildScrollView(
+        child: Container(
+          child: Text("Home Page"),
         ),
       ),
     );

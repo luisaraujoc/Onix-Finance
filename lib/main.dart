@@ -128,7 +128,15 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
-        appBarTheme: AppBarTheme(elevation: 5),
+        appBarTheme: AppBarTheme(
+          elevation: 5,
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
         brightness: Brightness.dark,
         useMaterial3: true,
         colorScheme: ColorScheme.dark(
