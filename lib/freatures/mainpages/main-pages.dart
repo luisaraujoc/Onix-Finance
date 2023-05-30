@@ -60,7 +60,7 @@ class _MainScreensState extends State<MainScreens> {
           color: Colors.white,
         ),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(35),
         ),
         backgroundColor: Theme.of(context).colorScheme.primary,
       ),
