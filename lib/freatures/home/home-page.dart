@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, file_names, unused_local_variable
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, file_names, unused_local_variable, prefer_const_literals_to_create_immutables
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
@@ -14,30 +14,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String username = 'Cleiton';
-
-  List<String> mesesDoAno = const [
-    'Janeiro',
-    'Fevereiro',
-    'Março',
-    'Abril',
-    'Maio',
-    'Junho',
-    'Julho',
-    'Agosto',
-    'Setembro',
-    'Outubro',
-    'Novembro',
-    'Dezembro',
-  ];
-
-  String dia = DateTime.now().day.toString();
-
-  getMesDoAno() {
-    final numeroMes = DateTime.now().month;
-    String mes = mesesDoAno[numeroMes - 1];
-
-    return mes;
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -114,59 +90,119 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  Container(
-                    width: width * 0.9,
-                    height: height * 0.2,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 42, 9, 108),
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/images/balance-frame-background.png',
-                        ),
-                        fit: BoxFit.fill,
-                        opacity: 0.5,
-                      ),
-                      border: Border.all(
-                        color: Theme.of(context).colorScheme.primary,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text(
-                            '$dia, ${getMesDoAno()}',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
-                            ),
+                  Row(
+                    children: [
+                      Container(
+                        width: width * 0.42,
+                        height: height * 0.2,
+                        decoration: BoxDecoration(
+                          color: Colors.green.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.green.shade300,
+                            width: 2,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Row(
-                            children: [
-                              Text(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Entradas',
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(12.0),
+                              child: Text(
                                 'R\$ 0,00',
                                 style: TextStyle(
-                                  fontSize: 50,
+                                  fontSize: 24,
                                   fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 0),
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Icon(
+                                  EvaIcons.arrowIosUpward,
                                   color: Colors.white,
                                 ),
                               ),
-                              Spacer(),
-                              Container(
-                                child: balancoRetorno(context),
-                              ),
-                            ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Spacer(),
+                      Container(
+                        width: width * 0.42,
+                        height: height * 0.2,
+                        decoration: BoxDecoration(
+                          color: Colors.red.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.redAccent.shade400,
+                            width: 2,
                           ),
                         ),
-                      ],
-                    ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Entradas',
+                              style: TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.all(12.0),
+                              child: Text(
+                                'R\$ 0,00',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 0),
+                              child: Container(
+                                width: 30,
+                                height: 30,
+                                decoration: BoxDecoration(
+                                  color: Colors.redAccent.shade400,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Icon(
+                                  EvaIcons.arrowIosDownward,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 30, bottom: 10),
+                    color: Colors.black26,
+                    height: 1,
+                    width: width,
+                  ),
+                  Container(
+                    child: null,
                   ),
                 ],
               ),
