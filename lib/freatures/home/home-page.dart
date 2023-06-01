@@ -96,10 +96,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: width * 0.42,
                         height: height * 0.2,
                         decoration: BoxDecoration(
-                          color: Colors.green.shade50,
+                          color: Theme.of(context).colorScheme.background,
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(
-                            color: Colors.green.shade300,
+                            color:
+                                Theme.of(context).colorScheme.primaryContainer,
                             width: 2,
                           ),
                         ),
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 width: 30,
                                 height: 30,
                                 decoration: BoxDecoration(
-                                  color: Colors.green,
+                                  color: Theme.of(context).colorScheme.primary,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Icon(
@@ -147,10 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: width * 0.42,
                         height: height * 0.2,
                         decoration: BoxDecoration(
-                          color: Colors.red.shade50,
+                          color: Theme.of(context).colorScheme.background,
                           borderRadius: BorderRadius.circular(20),
                           border: Border.all(
-                            color: Colors.redAccent.shade400,
+                            color:
+                                Theme.of(context).colorScheme.tertiaryContainer,
                             width: 2,
                           ),
                         ),
@@ -159,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Entradas',
+                              'Saídas',
                               style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.w600,
@@ -195,16 +197,24 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 30, bottom: 10),
-                    color: Colors.black26,
-                    height: 1,
-                    width: width,
-                  ),
-                  Container(
-                    child: null,
-                  ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 24.0,
+                bottom: 24.0,
+              ),
+              child: Container(
+                width: width,
+                height: 0.5,
+                decoration: BoxDecoration(
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onBackground
+                      .withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
             ),
           ],
@@ -212,6 +222,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  // Container movimentContainer() {
+  //   // consulta no banco de dados dos movimentos, retorna os dados e os coloca no container
+  //   // movimentContainer() é chamado dentro do ListView.builder para cada movimento
+  // };
 
   balancoRetorno(BuildContext context) {
     int posictive = -5;

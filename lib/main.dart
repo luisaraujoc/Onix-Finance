@@ -31,36 +31,33 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
         useMaterial3: true,
         colorScheme: ColorScheme.light(
-          background: Color(0xFFfdfcff),
-          primary: Color(0xFF0061a4),
-          secondary: Color(0xFF535f70),
-          tertiary: Color(0xFF6b5778),
-          outline: Color(0xFF73777f),
-          outlineVariant: Color(0xFFc3c7cf),
-          shadow: Color(0xFF000000),
-          error: Color(0xFFff0000),
-          surface: Color(0xFFfdfcff),
-          surfaceTint: Color(0xFF0061a4),
-          surfaceVariant: Color(0xFFdfe2eb),
-          primaryContainer: Color(0xFFd1e4ff),
-          secondaryContainer: Color(0xFFd7e3f7),
-          tertiaryContainer: Color(0xFFf2daff),
-          errorContainer: Color(0xFFffdad4),
-          inversePrimary: Color(0xFF9ecaff),
-          inverseSurface: Color(0xFF2f3033),
-          onBackground: Color(0xFF1a1c1e),
-          onError: Color(0xFFFFFFFF),
-          onErrorContainer: Color(0xFF410000),
-          onInverseSurface: Color(0xFFf1f0f4),
-          onPrimary: Color(0xFFFFFFFF),
-          onSecondary: Color(0xFFFFFFFF),
-          onSurface: Color(0xFF1a1c1e),
-          onPrimaryContainer: Color(0xFF001d36),
-          onSecondaryContainer: Color(0xFF101c2b),
-          onTertiaryContainer: Color(0xFF251431),
-          onSurfaceVariant: Color(0xFF43474e),
-          onTertiary: Color(0xFFFFFFFF),
-          scrim: Color(0xFF2675FF),
+          primary: Color(0xFF00BFA5), // verde-água
+          secondary: Color(0xFFFFC107), // amarelo
+          tertiary: Color(0xFFFF4081), // rosa
+          surface: Color(0xFFFFFFFF), // branco
+          background: Color(0xFFFFFFFF), // branco
+          error: Color(0xFFB00020), // vermelho
+          onPrimary: Color(0xFFFFFFFF), // branco
+          onSecondary: Color(0xFF000000), // preto
+          onTertiary: Color(0xFFFFFFFF), // branco
+          onSurface: Color(0xFF000000), // preto
+          onBackground: Color(0xFF000000), // preto
+          onError: Color(0xFFFFFFFF), // branco
+          primaryContainer: Color(0xFF009688), // verde-água mais escuro
+          onPrimaryContainer: Color(0xFFFFFFFF), // branco
+          secondaryContainer: Color(0xFFFFB300), // amarelo mais escuro
+          onSecondaryContainer: Color(0xFF000000), // preto
+          tertiaryContainer: Color(0xFFF50057), // rosa mais escuro
+          onTertiaryContainer: Color(0xFFFFFFFF), // branco
+          errorContainer: Color(0xFFCF6679), // vermelho claro
+          onErrorContainer: Color(0xFF000000), // preto
+          outline: Color(0x1F000000), // preto transparente
+          outlineVariant: Color(0x1F000000), // preto transparente
+          shadow: Color(0x33000000), // preto transparente
+          scrim: Colors.black54, // preto semi-transparente
+          inverseSurface: Colors.black, // preto
+          onInverseSurface: Colors.white, // branco
+          inversePrimary: Colors.white, // branco
         ),
         textTheme: TextTheme(
           headlineLarge: TextStyle(
@@ -141,36 +138,33 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         useMaterial3: true,
         colorScheme: ColorScheme.dark(
-          background: Color(0xFF1a1c1e),
-          primary: Color(0xFF9ecaff),
-          secondary: Color(0xFFbbc7db),
-          shadow: Color(0xFF000000),
-          surface: Color(0xFF1a1c1e),
-          error: Color(0xFFff9798),
-          errorContainer: Color(0xFFffdad9),
-          inversePrimary: Color(0xFF0061a4),
-          inverseSurface: Color(0xFFe2e2e6),
-          onBackground: Color(0xFFe2e2e6),
-          onError: Color(0xFFffffff),
-          onErrorContainer: Color(0xFF410009),
-          onInverseSurface: Color(0xFF2f3033),
-          onPrimary: Color(0xFF003258),
-          onPrimaryContainer: Color(0xFFd1e4ff),
-          onSecondary: Color(0xFF253140),
-          onSecondaryContainer: Color(0xFFd7e3f7),
-          onSurface: Color(0xFFe2e2e6),
-          onSurfaceVariant: Color(0xFFc3c7cf),
-          onTertiary: Color(0xFF3b2948),
-          onTertiaryContainer: Color(0xFFf2daff),
-          outline: Color(0xFF8d9199),
-          outlineVariant: Color(0xFF43474e),
-          primaryContainer: Color(0xFF00497d),
-          secondaryContainer: Color(0xFF3b4858),
-          surfaceTint: Color(0xFF9ecaff),
-          surfaceVariant: Color(0xFF43474e),
-          tertiary: Color(0xFFd6bee4),
-          tertiaryContainer: Color(0xFF523f5f),
-          scrim: Color(0xFF191A19),
+          primary: Color(0xFF26A69A), // verde-água escuro
+          secondary: Color(0xFFFFCA28), // amarelo escuro
+          tertiary: Color(0xFFF50057), // rosa escuro
+          surface: Color(0xFF121212), // cinza escuro
+          background: Color(0xFF121212), // cinza escuro
+          error: Color(0xFFCF6679), // vermelho claro
+          onPrimary: Color(0xFFFFFFFF), // branco
+          onSecondary: Color(0xFF000000), // preto
+          onTertiary: Color(0xFFFFFFFF), // branco
+          onSurface: Color(0xFFFFFFFF), // branco
+          onBackground: Color(0xFFFFFFFF), // branco
+          onError: Color(0xFF000000), // preto
+          primaryContainer: Color(0xFF00897B), // verde-água mais escuro
+          onPrimaryContainer: Color(0xFFFFFFFF), // branco
+          secondaryContainer: Color(0xFFFFA000), // amarelo mais escuro
+          onSecondaryContainer: Color(0xFF000000), // preto
+          tertiaryContainer: Color(0xFFC51162), // rosa mais escuro
+          onTertiaryContainer: Color(0xFFFFFFFF), // branco
+          errorContainer: Color(0xFFB00020), // vermelho
+          onErrorContainer: Color(0xFFFFFFFF), // branco
+          outline: Color(0x1FFFFFFF), // branco transparente
+          outlineVariant: Color(0x1FFFFFFF), // branco transparente
+          shadow: Color(0x33000000), // preto transparente
+          scrim: Colors.black54, // preto semi-transparente
+          inverseSurface: Colors.white, // branco
+          onInverseSurface: Colors.black, // preto
+          inversePrimary: Colors.black, // preto
         ),
         textTheme: TextTheme(
           headlineLarge: TextStyle(
