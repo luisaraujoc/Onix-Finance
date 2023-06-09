@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-// import 'package:financerakkii/freatures/onboarding/onboarding_page.dart';
+// import 'package:onixfinance/freatures/onboarding/onboarding_page.dart';
 import 'package:flutter/material.dart';
 
 import '../onboarding/onboarding.dart';

@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, file_names, unused_local_variable, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, file_names, unused_local_variable, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -203,7 +204,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.only(
                 top: 24.0,
-                bottom: 24.0,
+                bottom: 4.0,
               ),
               child: Container(
                 width: width,
@@ -217,56 +218,100 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: height * 0.51,
+              child: ListView(
+                children: [
+                  Movimentos(context),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
-  // Container movimentContainer() {
-  //   // consulta no banco de dados dos movimentos, retorna os dados e os coloca no container
-  //   // movimentContainer() é chamado dentro do ListView.builder para cada movimento
-  // };
-
-  balancoRetorno(BuildContext context) {
-    int posictive = -5;
-
-    if (posictive == 5) {
-      return Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(20),
+  Container Movimentos(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(bottom: 8.0),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.outline.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 12.0,
+          bottom: 12.0,
+          left: 2.0,
+          right: 8.0,
         ),
-        child: Icon(
-          EvaIcons.arrowIosUpwardOutline,
-          color: Theme.of(context).colorScheme.surface,
-          size: 30,
+        child: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primaryContainer
+                      .withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Icon(
+                    FluentSystemIcons.ic_fluent_drive_mode_filled,
+                    size: 34,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Combustivel do carro',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Text(
+                  'Automóvel',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+            Spacer(),
+            Column(
+              children: [
+                Text(
+                  'R\$ 0,00',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(
+                    '16, jun 2021',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
-      );
-    } else if (posictive == 0) {
-      return Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.tertiary,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Icon(
-          EvaIcons.minusCircleOutline,
-          color: Theme.of(context).colorScheme.surface,
-          size: 30,
-        ),
-      );
-    } else if (posictive == -5) {
-      return Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.error,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Icon(
-          EvaIcons.arrowIosDownwardOutline,
-          color: Theme.of(context).colorScheme.surface,
-          size: 30,
-        ),
-      );
-    }
+      ),
+    );
   }
 }

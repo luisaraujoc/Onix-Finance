@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:financerakkii/freatures/onboarding/onboarding.dart';
+import 'package:onixfinance/freatures/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {

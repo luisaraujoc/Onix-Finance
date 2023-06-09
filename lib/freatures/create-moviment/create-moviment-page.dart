@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:financerakkii/freatures/mainpages/main-pages.dart';
+import 'package:onixfinance/freatures/mainpages/main-pages.dart';
 import 'package:flutter/material.dart';
 
 class CreateMovimenteScreen extends StatefulWidget {
